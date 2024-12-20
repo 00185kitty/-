@@ -1,0 +1,241 @@
+<html>
+    <head><title>網頁程式設計</title></head>
+    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>        
+    <script>
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                rtl: true
+            });
+        });
+    </script>
+        <style>
+            body{
+                margin:0px;
+            }
+            .top{
+                background-color:rgb(218, 145, 214);
+                display:flex;
+                justify-content:space-between;
+                align-items: center;
+            }
+            .top .logo{
+                font-size:35px;
+                font-weight:bold;
+
+            }
+            .top .logo img{
+                width:100px;
+                vertical-align:middle;
+            }
+            .top .top-nav{
+                font-size:25px;
+                font-weight: bold;
+            }
+            .top .top-nav a{
+                text-decoration:none;
+                color:white;
+            }
+            .nav{
+                background-color:black;
+                display:flex;
+                justify-content:center;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;   /*使用block呈現上下排列*/
+            }
+            li.dropdown:hover{
+                background-color: black;  /*設定背景顏色*/
+            }
+            .dropdown-content {  /*設定下拉選單內容格式*/
+                display: none;
+                position: absolute;
+                background-color: black;
+                min-width: 160px;
+                z-index: 1;
+            }
+            .dropdown-content a {/*設定下拉選單連結內容格式*/
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .nav ul{
+                list-style-type: none;
+                margin:0;
+                padding:0;
+                overflow:hidden;
+                background-color:black;
+            }
+            .nav li{
+                float:left;
+            }
+            .nav li a{
+                display:block;
+                color:white;
+                text-align:center;
+                padding:14px 16px;
+                text-decoration: none;
+            }
+            .nav li a:hover{
+                background-color:gray;
+            }
+            
+            .banner{
+                background-image:linear-gradient(rgb(99, 76, 184),white);
+                text-align:center;
+                color:gray;
+            }
+            .banner h1{
+                padding:25px;
+            }
+            .faculty {
+            display: block;
+            justify-content: center;
+            background-color:white;
+            padding:40px;
+            }
+            .faculty h2 {
+                font-size: 25px;
+                color: rgb(50,51,52);
+                padding-bottom:40px;
+            }
+            .faculty .container {
+                /*border:1px solid red;*/
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .faculty .teacher{
+                /*border:1px solid blue;*/
+                display:block;
+                text-decoration: none;
+            }
+            .faculty .teacher img{
+                height: 200px;
+                width: 200px;
+            }
+            .faculty .teacher h3{
+                color: White;
+                background-color: rgba(39,40,34,.500);
+                text-align: center;           
+            }
+            .contact{
+                background-color:white;
+                display:flex;
+                justify-content:space-around;
+                align-items:center;
+                padding: 60px 50px;
+            }
+            .contact.left h3{
+
+                padding:15px 0px;
+            }
+            .contact.right{
+                border:1px black solid;
+                height:300px;
+                width:300px;
+            }
+            .contact.right iframe{
+                height:100%;
+                width:100%;
+            }
+            .footer{
+                height:50px;
+                background-color:black;
+                color:white;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+            }
+        </style>
+    
+    <body>
+        <div class="top">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/%28G%29I-dle_logo.svg/512px-%28G%29I-dle_logo.svg.png">
+                (G)I-DLE
+            </div>
+            <div class="top-nav">
+                <a href=#>(G)I-DLE</a>
+                <a href=#>成員</a>
+                <a href=#>登入</a>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href=#>首頁</a></li>
+                <li><a href=#>團體簡介</a></li>
+                <li  class="dropdown"><a href="#faculty">成員簡介</a>
+                    <div class="dropdown-content">
+                        <a href="#faculty">曹薇娟</a>
+                        <a href="#faculty">金米妮</a>
+                        <a href="#faculty">徐穗珍</a>
+                        <a href="#faculty">田小娟</a>
+                        <a href="#faculty">宋雨琦</a>
+                        <a href="#faculty">葉舒華</a>
+                    </div>   
+                <li><a href=#>相關資訊</a></li>
+            </ul>
+        </div>
+        <div class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><img src="f:\網頁\G-2.jpg" /></li>
+                    <li><img src="f:\網頁\G-1.jpg" /></li>
+                    <li><img src="f:\網頁\G-3.jpg" /></li>
+                </ul>
+            </div>
+        </div>
+        <div class="banner">
+            <h1>團體介紹</h1>
+            <h1>金唱片獎新人獎</h1>
+            <h1>Mnet亞洲音樂大獎最佳演唱</h1>
+            <h1>MAMA大獎最受歡迎全球表演女團獎</h1>
+        </div>
+        <div class="faculty" id="faculty">
+            <h2>成員介紹</h2>
+            <div class="container">
+                <a class="teacher" href="">
+                    <img src="f:\網頁\美延.jpg" />
+                    <h3>曹薇娟</h3>
+                </a>
+                <a class="teacher" href="">
+                    <img src="f:\網頁\minnie.jpg" />
+                    <h3>金米妮</h3>
+               </a>
+               <a class="teacher" href="">
+                   <img src="f:\網頁\穗珍.jpg" />
+                   <h3>徐穗珍</h3>
+               </a>
+               <a class="teacher" href="">
+                <img src="f:\網頁\小娟.jpg" />
+                <h3>田小娟</h3>
+            </a>
+            <a class="teacher" href="">
+                <img src="f:\網頁\雨琦.jpg" />
+                <h3>宋雨琦</h3>
+           </a>
+           <a class="teacher" href="">
+               <img src="f:\網頁\舒華.jpg" />
+               <h3>葉舒華</h3>
+           </a>                
+            </div>
+        </div>
+        <div class="contact">
+            <div class="left">
+                <h3>韓國首爾市江南區</h3>
+                <h3>論峴洞80-1號ShinHan大樓3層</h3>
+                <h3>電話:+82 2-3445-1045</h3>
+            </div>
+            <div class="right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.4113834286386!2d127.05311415805755!3d37.54537044308421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca464b349d913%3A0x319caa42c36ad3b2!2zQ3ViZeWom-aogg!5e0!3m2!1szh-TW!2stw!4v1734671957576!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="footer">&copy;Copyright 2024 Department of Information Management, (G)I-DLE. All rights reserved. 維護者 LIAO PEICHUN</div>
+    </body>
+</html>
